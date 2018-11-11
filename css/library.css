@@ -9,6 +9,7 @@ form {
     background-color:rgb(107, 107, 107);
     margin: 5px;
     padding: 5px;
+    border-radius: 5px;
 }
 
 label {
