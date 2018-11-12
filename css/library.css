@@ -44,31 +44,31 @@ footer {
 }
 
 .logo-item {
-    color: #FEFDFD;    
+    color: #FEFDFD;
     font-size: 30px;
     font-weight: bold;
     text-decoration: none;
 }
 
-.nav-menu{     
+.nav-menu{
     position: absolute;
     padding: 5px;
     right: 10px;
     list-style: none;
 }
 
-.nav-menu > li {    
+.nav-menu > li {
     padding: 4px 6px;
     display: inline-block;
 }
 
-.nav-sub-menu{ 
+.nav-sub-menu{
     bottom: 8px;
     right: 10px;
     padding: 20px;
     list-style: none;
 }
-.nav-sub-menu > li {    
+.nav-sub-menu > li {
     padding: 4px 6px;
     display: inline-block;
 }
