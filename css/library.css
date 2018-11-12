@@ -1,67 +1,87 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: cursive;
     box-sizing: border-box;
 }
 
+/* Basic labesl */
+
+/* Containers */
 header {
-    background-color: #333333;
-    width: 100%;
-    padding: 12px;
+    background-color: #708090;
     display: flex;
+    padding: 12px;
+    width: 100%;
 }
+
+main {
+    padding: 12px;
+    background: #ffffff;
+    bottom: 0;
+}
+
+section {
+    background: #ffffff;
+    border: 1px solid #080808;
+    border-radius: 8px;
+    height: 450px;
+    margin:  10px 5%;
+    padding: 15px;
+}
+
+footer {
+    background-color: #708090;
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+/* Classes */
 
 .logo {
     padding: 5px;
 }
 
-.logo > a {
+.logo-item {
     color: #FEFDFD;    
-    font-size: 26px;
+    font-size: 30px;
     font-weight: bold;
     text-decoration: none;
 }
 
 .nav-menu{     
-    list-style: none;
     position: absolute;
     padding: 5px;
     right: 10px;
+    list-style: none;
 }
 
 .nav-menu > li {    
     padding: 4px 6px;
     display: inline-block;
-    border-radius: 4px;
 }
 
-.nav-menu > li > a{
-    text-decoration: none;
+.nav-sub-menu{ 
+    bottom: 8px;
+    right: 10px;
+    padding: 20px;
+    list-style: none;
+}
+.nav-sub-menu > li {    
+    padding: 4px 6px;
+    display: inline-block;
+}
+
+.menu-item {
     color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-.nav-menu > li > a:hover{
+.menu-item:hover{
     text-decoration: underline;
-}
-
-main {
-    padding: 12px;
-    background: #00ab6b;
-    bottom: 0;
-}
-
-section {
-    background: #1775bb;
-    border-radius: 8px;
-    padding: 15px;
-    height: 500px;
-}
-
-footer {
-    width: 100%;
-    background-color: #333333;
-    width: 100%;
 }
 
 form {
