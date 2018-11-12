@@ -17,20 +17,23 @@ header {
 
 main {
     padding: 12px;
-    background: #00ab6b;
+    background: #ffffff;
     bottom: 0;
 }
 
 section {
-    background: #1775bb;
+    background: #ffffff;
+    border: 1px solid #080808;
     border-radius: 8px;
+    height: 450px;
+    margin:  10px 5%;
     padding: 15px;
-    height: 500px;
 }
 
 footer {
-    width: 100%;
-    background-color: #333333;
+    background-color: #708090;
+    display: flex;
+    position: relative;
     width: 100%;
 }
 
@@ -55,6 +58,17 @@ footer {
 }
 
 .nav-menu > li {    
+    padding: 4px 6px;
+    display: inline-block;
+}
+
+.nav-sub-menu{ 
+    bottom: 8px;
+    right: 10px;
+    padding: 20px;
+    list-style: none;
+}
+.nav-sub-menu > li {    
     padding: 4px 6px;
     display: inline-block;
 }
