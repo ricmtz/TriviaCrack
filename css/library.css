@@ -12,6 +12,17 @@ header {
     display: flex;
 }
 
+.logo {
+    padding: 5px;
+}
+
+.logo > a {
+    color: #FEFDFD;    
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 .nav-menu{     
     list-style: none;
     position: absolute;
