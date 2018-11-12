@@ -5,6 +5,35 @@
     box-sizing: border-box;
 }
 
+header {
+    background-color: #333333;
+    width: 100%;
+    padding: 12px;
+    display: flex;
+}
+
+.nav-menu{     
+    list-style: none;
+    position: absolute;
+    padding: 5px;
+    right: 10px;
+}
+
+.nav-menu > li {    
+    padding: 4px 6px;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.nav-menu > li > a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.nav-menu > li > a:hover{
+    text-decoration: underline;
+}
+
 form {
     background-color:rgb(107, 107, 107);
     margin: 5px;
