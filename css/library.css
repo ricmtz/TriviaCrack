@@ -85,6 +85,29 @@ footer {
     text-decoration: underline;
 }
 
+.intro {
+    border: none;
+    text-align: center;
+}
+
+.intro-text {
+    font-size: 60px;
+    text-align: center;
+    margin: 5% 10%;
+}
+
+.btn-play {
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background: #dc143c;
+    color: #000000;
+    font-size: 30px;
+    padding: 1px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Fotm items */
 form {
     background-color:rgb(107, 107, 107);
     margin: 5px;
