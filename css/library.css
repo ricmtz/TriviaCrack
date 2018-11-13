@@ -85,6 +85,45 @@ footer {
     text-decoration: underline;
 }
 
+.drop-item {
+    min-width: 150px;
+}
+
+.sub-item {
+    color: #080808;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.sub-item:hover {
+    text-decoration: underline;
+}
+
+.nav-sub {
+    background: #ffffff;
+    border: 1px solid #708090;
+    border-radius: 5px;
+    list-style: none;
+    float: right;
+    display: none;
+    position: absolute;
+}
+
+.drop-item:hover .nav-sub {
+    display: block;
+}
+
+.material-icons {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.nav-sub > li {
+    padding: 10px;
+    margin-right: 20px;
+}
+
 .intro {
     border: none;
     text-align: center;
