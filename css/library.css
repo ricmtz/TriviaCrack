@@ -2,10 +2,11 @@
     margin: 0;
     padding: 0;
     font-family: cursive;
+    font-size: 16px;
     box-sizing: border-box;
 }
 
-/* Basic labesl */
+/* Basic labels */
 
 /* Containers */
 header {
@@ -146,8 +147,8 @@ footer {
     text-align: center;
 }
 
-/* Fotm items */
-form {
+/* Form items */
+form:not(div form) {
     background-color:rgb(107, 107, 107);
     margin: 5px;
     padding: 5px;
@@ -162,7 +163,7 @@ label {
     font-weight: 600;
 }
 
-button {
+button:not(.login-button) {
     margin: 2px;
     padding: 4px;
     text-align: center;
@@ -190,7 +191,7 @@ button {
     margin-left: 5%;
 }
 
-input[type=text], input[type=password] {
+input[type=text]:not(.txt-input), input[type=password]:not(.txt-input) {
     min-width: 90%;
     padding: 5px 10px;
     margin: 2px 5%;
@@ -229,4 +230,64 @@ select {
 
 .blue:hover {
     border-color: rgb(0, 255, 255);
+}
+
+.base-container {
+  width: 30%;
+  background-color: #e3eae3;
+  padding: 2%;
+  border: 1px solid #0f6775;
+  border-radius: 3px;
+  margin: 1% auto;
+  box-shadow: 1px 1px 2px 0px #000000;
+}
+
+.login-text {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 0% 0% 4% 0%;
+}
+
+.txt-input {
+  width: 100%;
+  padding: 7px 10px;
+  border: 1px solid #0f6775;
+  border-radius: 3px;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #080808;
+  box-shadow: 1px 1px 2px 0px #000000;
+}
+
+.input-container {
+  padding: 1% 0;
+  margin: 0% auto;
+}
+
+.button-container {
+  padding: 2% 0;
+  margin: 0% auto;
+}
+
+.login-button {
+  width: 100%;
+  padding: 8px 16px;
+  border: 1px solid #0f6775;
+  border-radius: 3px;
+  font-weight: bold;
+  background-color: #4ecdc4;
+  color: #000000;
+  cursor: pointer;
+  transition: 0.4s;
+  box-shadow: 1px 1px 2px 0px #000000;
+}
+
+.login-button:hover {
+  background-color: #1a535c;
+  color: #FFFFFF;
+}
+
+.txt-container {
+  text-align: center;
 }
