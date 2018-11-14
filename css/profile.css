@@ -1,0 +1,116 @@
+.profile {
+    padding: 10px 15px;
+    display: block;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #080808;
+    border-radius: 5px;
+}
+
+.info {
+    display: flex;
+}
+
+.user-inf {
+    padding: 10px 20px;
+    display: flex;
+}
+
+.user-img {
+    border: 1px solid #000000;
+    border-radius: 5px;
+    width: 100%;
+    height: 200px;
+}
+.cont-info {
+    padding: 5px 20px;
+}
+
+.cont-info > h1 {
+    font-size: 34px;
+}
+
+.cont-info > p {
+    font-size: 18px;
+}
+
+.score {
+    font-size: 24px;
+    text-align: left;
+    padding: 5px;
+    margin: 10px 0;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.btn-a {
+    text-decoration: none;
+    background: #708090;
+    color: #FEFDFD;
+    padding: 4px 15px;
+    margin: 10px 0px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    float: right;
+}
+
+.form-add-friend {
+    display: flex;
+    float: right;
+}
+
+.list-friends {
+    background: #8a8d91;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+.simpl-text{
+    padding: 5px 10px;
+    margin: 2px;
+    background-color: #FEFDFD;
+    color: #080808;
+    border-radius: 5px;
+}
+
+.friends{
+    width: 100%;
+    list-style: none;
+}
+
+.friend {
+    background: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 4px 8px;
+    margin: 10px 15px;
+    display: flex;
+}
+
+.img-frnd{
+    min-width: 50px;;
+    width: 90%;
+    height: 50px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.frd-nickname {
+    margin: auto;
+    font-size: 24px;
+    padding: 5px 10px;
+}
+
+.btn-actions{
+    margin: auto;
+}
+
+.frd-actions{
+    float: right;
+}
+
+.blank-space {
+    width: 90%;
+}

@@ -147,112 +147,6 @@ footer {
     text-align: center;
 }
 /* Profile view */
-.profile {
-    display: block;
-    height: 100%;
-}
-
-.info {
-    display: flex;
-}
-
-.user-inf {
-    padding: 10px 20px;
-    display: flex;
-}
-
-.user-img {
-    border: 1px solid #000000;
-    width: 150px;
-    height: 200px;
-}
-.cont-info{
-    padding: 5px 20px;
-}
-
-.cont-info > h1 {
-    font-size: 34px;
-}
-
-.cont-info > p {
-    font-size: 18px;
-}
-
-.score {
-    font-size: 24px;
-    text-align: left;
-    padding: 5px;
-    margin: 10px 0;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    min-width: 250px;
-}
-
-.btn-a {
-    text-decoration: none;
-    background: #708090;
-    color: #FEFDFD;
-    padding: 4px 15px;
-    margin: 10px 0px;
-    border: 1px solid #000000;
-    border-radius: 5px;
-}
-
-.list-friends {
-    background: #8a8d91;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    padding: 5px;
-    display: block;
-}
-
-.add-friend {
-    display: flex;
-    margin: 0px 10px;
-}
-
-.add-friend > h1{
-    font-size: 30px;
-}
-
-.simpl-text{
-    padding: 5px 10px;
-    margin: 2px;
-    font-size: 14px;
-    background-color: #FEFDFD;
-    color: #080808;
-    border-radius: 5px;
-}
-
-.friends{
-    list-style: none;
-}
-
-.friend {
-    background: #ffffff;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    padding: 4px 8px;
-    margin: 10px 15px;
-    display: flex;
-}
-
-.img-frnd{
-    width: 35px;
-    height: 45px;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    padding: 2px;
-}
-
-.friend > p {
-    font-size: 24px;
-    padding: 5px 10px;
-}
-
-.blank-space {
-    width: 90%;
-}
 
 /* Form items */
 label {
@@ -263,15 +157,15 @@ label {
     font-weight: 600;
 }
 
-button:not(.login-button, .register-button) {
+/* button:not(.login-button, .register-button) {
     margin: 2px;
-    padding: 4px;
+    padding: 4px; 
     text-align: center;
     font-size: 14px;
     font-weight: 600;
     border-radius: 5px;
     background: #708090;
-}
+} */
 
 .btn-small {
     min-width: 40px;
