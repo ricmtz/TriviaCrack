@@ -1,0 +1,30 @@
+/* Containers */
+header {
+    background: #18273D;
+}
+
+main {
+    background: linear-gradient(#398689, #69998C);
+}
+
+section {
+}
+
+footer {
+    background: #18273D;
+}
+
+ /* Classes */
+
+.list-friends {
+    background: #DBEAF1;
+}
+
+.logo-item{
+    margin-left: 10px;
+    width: 40%;
+}
+
+.base-container {
+    background: #DBEAF1;
+}

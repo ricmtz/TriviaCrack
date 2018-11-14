@@ -5,6 +5,7 @@
     width: 100%;
     border: 1px solid #080808;
     border-radius: 5px;
+    background: rgb(255, 255, 255);
 }
 
 .info {
@@ -61,7 +62,7 @@
 }
 
 .list-friends {
-    background: #8a8d91;
+    background: #DBEAF1;
     border: 1px solid #000000;
     border-radius: 5px;
 }
@@ -108,6 +109,8 @@
 }
 
 .frd-actions{
+    height: 40px;
+    width: 40px;
     float: right;
 }
 
