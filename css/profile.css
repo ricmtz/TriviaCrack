@@ -27,17 +27,17 @@
     padding: 5px 20px;
 }
 
-.cont-info > h1 {
+.tlt-nickname {
     font-size: 34px;
 }
 
-.cont-info > p {
+.txt-email {
     font-size: 18px;
 }
 
 .score {
     font-size: 24px;
-    text-align: left;
+    text-align: right;
     padding: 5px;
     margin: 10px 0;
     border: 1px solid #000000;
@@ -54,6 +54,10 @@
     border: 1px solid #000000;
     border-radius: 5px;
     float: right;
+}
+
+.tlt-friend{
+    font-size: 30px;
 }
 
 .form-add-friend {
