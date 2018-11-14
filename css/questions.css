@@ -22,3 +22,20 @@ textarea {
     padding: 5px 10px;
     float: right;
 }
+
+.tlt-cat{
+    background: #18273D;
+    border-radius: 10px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.img-cat {
+    width: 45px;
+    height: 45px;
+}
+
+.question {
+    padding: 20px 15px 5px;
+    text-align: justify;
+}
