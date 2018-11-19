@@ -31,8 +31,9 @@ textarea {
 }
 
 .img-cat {
-    width: 45px;
-    height: 45px;
+    max-width: 45px;
+    max-height: 45px;
+    margin: auto 10px;
 }
 
 .question {

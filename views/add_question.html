@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/library.css">
-    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/grid-i.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/questions.css">
     <link rel="shortcut icon" href="../favicon.ico">
@@ -36,19 +36,27 @@
     </header>
     <main>
         <section>
-            <div class="conatiner">
-                <div class="box col-12">
+            <div class="multiple-container">
+                <div class="col-12">
                     <h1>Add Question</h1>
                     <form action="" class="container">
-                        <label class="box col-12">Question</label>
-                        <textarea name="" id="" cols="30" rows="5" class="box col-12 txt-question" placeholder="Write your question."></textarea>
-                        <label class="box col-2">Option 1</label>
-                        <input type="text" name="" id="" placeholder="Write the first option" class="box col-10 txt-quest">
-                        <label class="box col-2">Option 2</label>
-                        <input type="text" name="" id="" placeholder="Write the second option" class="box col-10 txt-quest">
-                        <label class="box col-2">Option correct</label>
-                        <input type="text" name="" id="" placeholder="Write the correct option" class="box col-10 txt-quest">
-                        <div class="box col-12">
+                        <div class="col-12">
+                            <label>Question</label>
+                            <textarea name="" id="" cols="30" rows="5" class="col-12 txt-question" placeholder="Write your question."></textarea>
+                        </div>
+                        <div class="multiple-container">
+                            <label class="col-1">Option 1</label>
+                            <input type="text" name="" id="" placeholder="Write the first option" class="col-11 txt-quest">
+                        </div>
+                        <div class="multiple-container">
+                            <label class="col-1">Option 2</label>
+                            <input type="text" name="" id="" placeholder="Write the second option" class="col-11 txt-quest">
+                        </div>
+                        <div class="multiple-container">
+                            <label class="col-2">Option correct</label>
+                            <input type="text" name="" id="" placeholder="Write the correct option" class="col-10 txt-quest">
+                        </div>
+                        <div class="col-12">
                             <button type="submit" class="btn-submit">Create</button>
                         </div>
                     </form>
