@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8" />
     <title>Trivia Crack</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/library.css">
@@ -18,13 +17,18 @@
     <header>
         <div class="logo">
             <img src="../img/logo.png" class="logo-item">
+            <div class="drop-opts">
+                <i id="drop-menu" class="fa fa-bars"></i>
+            </div>
         </div>
         <nav>
-            <ul class="nav-menu">
+            <ul id="menu" class="nav-menu hide">
                 <li><a href="" class="menu-item">How to play</a></li>
                 <li><a href="" class="menu-item">Support</a></li>
-                <li class="drop-item"><a href="" class="menu-item">Nickname</a>
-                    <i class="material-icons md-light">keyboard_arrow_down</i>
+                <li><a href="" class="menu-item">Log-in/Sing-in</a></li>
+                <li class="drop-item">
+                    <a href="" class="menu-item">Nickname</a>
+                    <i class="fa fa-caret-down"></i>
                     <ul class="nav-sub">
                         <li><a href="" class="sub-item">Settings</a></li>
                         <li><a href="" class="sub-item">Play</a></li>
@@ -34,6 +38,7 @@
                 </li>
             </ul>
         </nav>
+        <script src="../js/menu.js"></script>
     </header>
     <main>
         <div class="profile">

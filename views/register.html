@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Trivia Crack Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/library.css">
     <link rel="stylesheet" href="../css/main.css">
@@ -12,18 +13,32 @@
     <link rel="shortcut icon" href="../favicon.ico">
   </head>
   <body>
-    <header>
-      <div class="logo">
-          <img src="../img/logo.png" class="logo-item">
-      </div>
-      <nav>
-        <ul class="nav-menu">
-          <li><a href="" class="menu-item">How to play</a></li>
-          <li><a href="" class="menu-item">Support</a></li>
-          <li><a href="" class="menu-item">Log-in/Sing-in</a></li>
-        </ul>
-      </nav>
-    </header>
+      <header>
+          <div class="logo">
+              <img src="../img/logo.png" class="logo-item">
+              <div class="drop-opts">
+                  <i id="drop-menu" class="fa fa-bars"></i>
+              </div>
+          </div>
+          <nav>
+              <ul id="menu" class="nav-menu hide">
+                  <li><a href="" class="menu-item">How to play</a></li>
+                  <li><a href="" class="menu-item">Support</a></li>
+                  <li><a href="" class="menu-item">Log-in/Sing-in</a></li>
+                  <li class="drop-item">
+                      <a href="" class="menu-item">Nickname</a>
+                      <i class="fa fa-caret-down"></i>
+                      <ul class="nav-sub">
+                          <li><a href="" class="sub-item">Settings</a></li>
+                          <li><a href="" class="sub-item">Play</a></li>
+                          <li><a href="" class="sub-item">Add Question</a></li>
+                          <li><a href="" class="sub-item">Log-out</a></li>
+                      </ul>
+                  </li>
+              </ul>
+          </nav>
+          <script src="../js/menu.js"></script>
+      </header>
     <main>
       <div class="base-container col-4">
         <div class="login-text">
