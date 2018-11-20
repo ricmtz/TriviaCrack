@@ -126,3 +126,9 @@
     text-align: center;
     margin: 10px 0;
 }
+
+.btn-update{
+    border:  1px solid #0f6775;
+    border-radius: 5px;
+    padding: 3px 5px;
+}
