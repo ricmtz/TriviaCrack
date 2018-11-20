@@ -88,3 +88,10 @@
   flex: 0 0 100%;
   max-width: 100%;
 }
+
+
+@media screen and (max-width: 600px) {
+  .multiple-container{
+    display: block;
+  }
+}

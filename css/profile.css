@@ -8,6 +8,10 @@
     background: rgb(255, 255, 255);
 }
 
+.cont-data {
+    margin: 15px 0;
+}
+
 .info {
     display: flex;
 }
@@ -33,6 +37,10 @@
 
 .txt-email {
     font-size: 18px;
+}
+
+.game-info{
+    display: block;
 }
 
 .score {
@@ -125,4 +133,20 @@
     font-size: 34px;
     text-align: center;
     margin: 10px 0;
+}
+
+.btn-update{
+    border:  1px solid #0f6775;
+    border-radius: 5px;
+    padding: 3px 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .btn-a{
+        float: none;
+    }
+
+    .form-add-friend{
+        float: none;
+    }
 }
