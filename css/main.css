@@ -1,10 +1,12 @@
 /* Containers */
 header {
     background: #18273D;
+    min-height:  12vh;
 }
 
 main {
     background: linear-gradient(#398689, #69998C);
+    min-height: 77vh;
 }
 
 section {
@@ -12,6 +14,7 @@ section {
 
 footer {
     background: #18273D;
+    min-height: 10vh;
 }
 
  /* Classes */
