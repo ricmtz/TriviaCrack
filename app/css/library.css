@@ -1,7 +1,22 @@
+@font-face {
+    font-family: 'Handlee';
+    src: url('./fonts/Handlee-Regular.ttf');
+}
+
+:root {
+    --main-color: #024a59;
+    --secondary-color: #f8f9e9;
+    --constrast-color: #f24b27;
+    --complementary-color: #2999A5;
+    --highlight-color: #201e20;
+    --txt-m-color: #ffffff;
+    --txt-color: #201e20;
+}
+
 * {
     margin: 0;
-    padding: 0;
-    font-size: 16px;
+    padding: 0; 
+    font-family: 'Handlee', cursive;
     box-sizing: border-box;
 }
 
@@ -20,14 +35,15 @@ h3 {
 
 /* Containers */
 header {
-    background: #18273D;
+    background: var(--main-color);
     padding: 0 10px;
     display: flex;
 }
 
 main {
     padding: 12px;
-    background: linear-gradient(#398689, #69998C);
+    background: var(--secondary-color);
+    /* background: linear-gradient(var(--main-bg-color), var(--main-bg-d-color)); */
     bottom: 0;
 }
 
@@ -41,7 +57,7 @@ section {
 }
 
 footer {
-    background: #18273D;
+    background: var(--main-color);
     display: flex;
     padding: 12px;
     width: 100%;
@@ -88,14 +104,16 @@ footer {
 }
 
 .menu-item {
-    color: rgb(255, 255, 255);
+    color: var(--txt-m-color);
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
+    padding: 5px 10px;
 }
 
 .menu-item:hover{
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    background: var(--constrast-color);
 }
 
 .drop-item {
@@ -116,6 +134,8 @@ footer {
 
 .sub-item:hover {
     text-decoration: underline;
+    background: var(--highlight-color);
+    color: var(--txt-color);
 }
 
 .nav-sub {
@@ -164,14 +184,21 @@ footer {
 }
 
 .btn-play {
-    border: 1px solid #000000;
+    /* border: 1px solid var(--complementary-color); */
+    /* box-shadow: 3px 3px var(--complementary-color); */
     border-radius: 5px;
-    background: #dc143c;
-    color: #000000;
+    background: var(--constrast-color);
+    color: #ffffff;
     font-size: 30px;
     padding: 1px 20px;
     text-decoration: none;
     text-align: center;
+}
+
+.btn-play:hover {
+    background: var(--complementary-color);
+    box-shadow: 1px 2px var(--highlight-color);
+    color: #ffffff;
 }
 /* Profile view */
 

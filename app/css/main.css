@@ -1,20 +1,26 @@
 /* Containers */
 header {
-    background: #18273D;
+    /* background: #18273D; */
     min-height:  12vh;
 }
 
 main {
-    background: linear-gradient(#398689, #69998C);
+    /* background: linear-gradient(#398689, #69998C); */
     min-height: 77vh;
+    /* background: #18273D; */
+}
+
+main {
+    /* background: linear-gradient(#398689, #69998C); */
 }
 
 section {
 }
 
 footer {
-    background: #18273D;
+    /* background: #18273D; */
     min-height: 10vh;
+    /* background: #18273D; */
 }
 
  /* Classes */
