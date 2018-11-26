@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="../css/library.css">
     <link rel="stylesheet" href="../css/grid-i.css">
     <link rel="stylesheet" href="../css/profile.css">
-    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/buttons.css">
+    <link rel="stylesheet" href="../css/inputs.css">
     <link rel="shortcut icon" href="../favicon.ico">
 </head>
 
@@ -44,28 +44,38 @@
         <script src="../js/menu.js"></script>
     </header>
     <main>
-        <div class="profile">
+        <section class="base-container">
             <div class="multiple-container">
-                <div class="col-2">
+                <div class="col-2 div-img">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Antu_im-invisible-user.svg/512px-Antu_im-invisible-user.svg.png"
                         class="user-img">
                 </div>
                 <div class="col-10">
                     <h1>Nickname</h1>
-                    <form action="" class="multiple-container">
-                        <label for="" class="col-1">Nickname</label>
-                        <input type="text" class="col-11 txt-input" placeholder="Write a new Nickname">
-                        <label for="" class="col-1">Email</label>
-                        <input type="email" class="col-11 txt-input" placeholder="Write a new email">
-                        <label for="" class="col-1">Password</label>
-                        <input type="password" class="col-11 txt-input" placeholder="Write a new Password">
-                        <label for="" class="col-1">Avatar</label>
-                        <input type="file" name="" id="" class="col-11 btn-file">
-                        <button type="submit" class="btn-middle btn-update">Update</button>
+                    <form action="" class="col-12">
+                        <div class="multiple-container div-field">
+                            <label for="" class="col-1">Nickname</label>
+                            <input type="text" class="col-11 txt-input" placeholder="Write a new Nickname">
+                        </div>
+                        <div class="multiple-container div-field">
+                            <label for="" class="col-1">Email</label>
+                            <input type="email" class="col-11 txt-input" placeholder="Write a new email">
+                        </div>
+                        <div class="multiple-container div-field">
+                            <label for="" class="col-1">Password</label>
+                            <input type="password" class="col-11 txt-input" placeholder="Write a new Password">
+                        </div>
+                        <div class="multiple-container div-field">
+                            <label for="" class="col-1">Avatar</label>
+                            <input type="file" name="" id="" class="col-11 btn-file">
+                        </div>
+                        <div class="multiple-container div-field">
+                            <button type="submit" class="btn-submit">Update</button>
+                        </div>
                     </form>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
     <footer>
         <nav>

@@ -1,32 +1,6 @@
-h1 {
-    font-size: 34px;
-    padding: 4px 10px;
-}
-
-textarea {
-    margin: 5px 0;
-    border-radius: 5px;
-    resize: none;
-}
-
-.txt-quest {
-    border: 1px solid #000000;
-    border-radius: 5px;
-    margin: 5px 0;
-    padding: 5px;
-}
-
-.btn-submit {
-    border: 1px solid #000000;
-    border-radius: 5px;
-    padding: 5px 10px;
-    float: right;
-}
-
 .tlt-cat{
-    background: #18273D;
-    border-radius: 10px;
-    color: #ffffff;
+    background: var(--highlight-color);
+    color: var(--txt-m-color);
     text-align: center;
 }
 
@@ -36,7 +10,12 @@ textarea {
     margin: auto 10px;
 }
 
+.quest {
+    margin: 4px 0;
+}
+
 .question {
     padding: 20px 15px 5px;
+    font-size: 18px;
     text-align: justify;
 }

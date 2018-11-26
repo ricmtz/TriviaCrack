@@ -1,9 +1,19 @@
+textarea {
+  margin: 5px 0;
+  border-radius: 5px;
+  resize: none;
+}
+
 .txt-input {
-  padding: 3% 5%;
-  border: 1px solid #0f6775;
+  padding: 10px 6px;
+  border: 1px solid var(--complementary-color);
   border-radius: 3px;
   font-size: 14px;
   background-color: #ffffff;
-  color: #080808;
-  box-shadow: 1px 1px 2px 0px #000000;
+  color: var(--txt-color);
+  box-shadow: 1px 1px 2px 0px var(--highlight-color);
+}
+
+.incorrect {
+  border: 3px solid red;
 }

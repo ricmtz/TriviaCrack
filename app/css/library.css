@@ -1,7 +1,4 @@
-@font-face {
-    font-family: 'Handlee';
-    src: url('./fonts/Handlee-Regular.ttf');
-}
+@import url('https://fonts.googleapis.com/css?family=Handlee');
 
 :root {
     --main-color: #024a59;
@@ -11,6 +8,8 @@
     --highlight-color: #201e20;
     --txt-m-color: #ffffff;
     --txt-color: #201e20;
+    --cont-color: #ffffff;
+    --sub-cont-color: #a8a8a8;
 }
 
 * {
@@ -90,6 +89,7 @@ footer {
 .nav-menu li {
     padding: 5px 0;
     display: inline-block;
+    transition: 0.4s;
 }
 
 .nav-sub-menu{
@@ -101,6 +101,7 @@ footer {
 .nav-sub-menu > li {
     padding: 4px 6px;
     display: inline-block;
+    transition: 0.4s;
 }
 
 .menu-item  a {
@@ -121,7 +122,7 @@ footer {
 
 .drop-item i{
     font-size: 24px;
-    color: #ffffff;
+    color: var(--txt-m-color);
 }
 
 .sub-item {
@@ -144,7 +145,7 @@ footer {
 }
 
 .nav-sub {
-    background: #ffffff;
+    background: var(--cont-color);
     border: 1px solid var(--constrast-color);
     list-style: none;
     float: right;
@@ -188,23 +189,6 @@ footer {
     margin: 5% 10%;
 }
 
-.btn-play {
-    /* border: 1px solid var(--complementary-color); */
-    /* box-shadow: 3px 3px var(--complementary-color); */
-    border-radius: 5px;
-    background: var(--constrast-color);
-    color: #ffffff;
-    font-size: 30px;
-    padding: 1px 20px;
-    text-decoration: none;
-    text-align: center;
-}
-
-.btn-play:hover {
-    background: var(--complementary-color);
-    box-shadow: 1px 2px var(--highlight-color);
-    color: #ffffff;
-}
 /* Profile view */
 
 /* Form items */
@@ -213,38 +197,6 @@ label {
     padding: 5px;
     font-size: 16px;
     font-weight: 600;
-}
-
-.btn-small {
-    min-width: 40px;
-}
-
-.btn-middle {
-    min-width: 150px;
-}
-
-.btn-big {
-    min-width: 250px;
-}
-
-.txt-input {
-    border: 1px solid #0f6775;
-    border-radius: 5px;
-    font-size: 14px;
-    margin: 5px 0;
-    padding: 5px;
-}
-
-.btn-option {
-    min-width: 90%;
-    margin-right: 5%;
-    margin-left: 5%;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    background: #0f6775;
-    padding: 5px 10px;
-    margin: 5px 5% 5px;
-    color: #FEFDFD;
 }
 
 input[type=radio], input[type=checkbox] {
@@ -262,13 +214,12 @@ select {
     border-radius: 5px;
 }
 
+/* Login and register */
 .base-container {
-  background-color: #e3eae3;
+  background-color: var(--cont-color);
   padding: 2%;
-  border: 1px solid #0f6775;
-  border-radius: 3px;
   margin: 1% auto;
-  box-shadow: 1px 1px 2px 0px #000000;
+  box-shadow: 1px 1px 2px 0px var(--highlight-color);
 }
 
 .login-text {
