@@ -17,7 +17,7 @@ gulp.task('clean', function () {
         .pipe(clean());
 });
 
-gulp.task('minify-css', function () {
+gulp.task('build-css', function () {
     const plugins = [
         postcssPresetEnv
     ];
@@ -29,7 +29,7 @@ gulp.task('minify-css', function () {
         .pipe(gulp.dest('./public/css'));
 });
 
-gulp.task('minify-js', function () {
+gulp.task('build-js', function () {
     gulp.src('./app/js/**/*.js')
         .pipe(concat('index.js'))
         .pipe(babel({ presets: ['@babel/env'] }))
@@ -42,7 +42,7 @@ gulp.task('mv-img', function () {
         .pipe(gulp.dest('./public/'));
 });
 
-gulp.task('minify-html', function () {
+gulp.task('build-html', function () {
     gulp.src('./app/**/*.html')
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(htmlreplace({
@@ -55,7 +55,7 @@ gulp.task('minify-html', function () {
 });
 
 gulp.task('build', function () {
-    gulpSequence('clean', 'minify-css', 'minify-js', 'minify-html', 'mv-img')(function (err) {
+    gulpSequence('clean', 'build-css', 'build-js', 'build-html', 'mv-img')(function (err) {
         if (err) {
             console.log('err');
         }
@@ -63,8 +63,8 @@ gulp.task('build', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('./app/css/**/*.css', ['minify-css']);
-    gulp.watch('./app/js/**/*.js', ['minify-js']);
-    gulp.watch('./app/**/*.html', ['minify-html']);
-    gulp.watch('./app/img/*.{jpg,png}', ['minify-html']);
+    gulp.watch('./app/css/**/*.css', ['build-css']);
+    gulp.watch('./app/js/**/*.js', ['build-js']);
+    gulp.watch('./app/**/*.html', ['build-html']);
+    gulp.watch('./app/img/*.{jpg,png}', ['build-html']);
 });
