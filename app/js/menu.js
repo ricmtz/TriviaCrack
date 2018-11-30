@@ -1,6 +1,4 @@
 
-
-
 function show() {
     const menu = document.getElementById('menu');
     menu.classList.toggle('hide');
@@ -42,11 +40,11 @@ function itemMenuScroll(add){
 function changePictureWelcome(){
     const picture = document.getElementById('welcome');
     console.log(window.screen.width);
-    if (window.screen.width >= 550) {
+    if (window.screen.width >= 400) {
         picture.src = "img/welcome.png";
     }
     else {
-        picture.src = "img/welcome-mobile.png";
+        picture.src = "img/logo.png";
     }
 }
 

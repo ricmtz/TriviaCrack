@@ -1,0 +1,74 @@
+h1 {
+    font-size: 50px;
+    color: #ec2a2a;
+    text-shadow: 2px 2px #000000;
+    display: inline;
+}
+
+h2 {
+    font-size:  40px;
+    color: #000055;
+}
+
+h3 {
+    font-size: 30px;
+    text-align: center;
+}
+
+/*  */
+
+.welcome-item {
+    width: 100%;
+    padding-top: 15px;
+}
+
+.intro {
+    border: none;
+    text-align: center;
+    margin: 15px 20px;
+    padding: 10% 0;
+}
+
+.intro-text {
+    font-size: 60px;
+    text-align: center;
+    margin: 5% 10%;
+}
+
+.picture-how{
+    padding-left: 5%;
+}
+
+.text-how {
+    padding-left: 7%;
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 35px;
+    }
+
+    h2 {
+        font-size:  25px;
+    }
+
+    .intro {
+        padding-top: 15%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .intro {
+        padding-top: 20%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h1 {
+        display: none;
+    }
+
+    .intro {
+        padding-top: 30%;
+    }
+}

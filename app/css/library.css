@@ -15,7 +15,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Handlee', cursive;
+    font-family: 'Poppins', cursive;
     box-sizing: border-box;
 }
 
@@ -196,24 +196,6 @@ footer {
     display: none;
 }
 
-/*  */
-
-.welcome-item {
-    width: 100%;
-}
-
-.intro {
-    border: none;
-    text-align: center;
-    min-height: 70vh;
-    margin: 15px 20px;
-}
-
-.intro-text {
-    font-size: 60px;
-    text-align: center;
-    margin: 5% 10%;
-}
 
 /* Profile view */
 
@@ -337,4 +319,5 @@ select {
         padding: 0;
         color: #ffffff;
     }
+
 }
