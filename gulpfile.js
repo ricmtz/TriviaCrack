@@ -11,6 +11,7 @@ const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const gulpSequence = require('gulp-sequence');
 const htmlreplace = require('gulp-html-replace');
+const ext_replace = require('gulp-ext-replace');
 
 gulp.task('clean', function () {
     return gulp.src('./public/*')
@@ -46,16 +47,23 @@ gulp.task('build-html', function () {
     gulp.src('./app/**/*.html')
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(htmlreplace({
-            css: './public/css/styles.css',
-            js: './public/js/index.css',
+            css: './css/styles.css',
+            js: './js/index.css',
         }, {
                 resolvePaths: true,
             }))
+        .pipe(ext_replace('.mst'))
+        .pipe(gulp.dest('./public/'));
+});
+
+gulp.task('mv-mst', function () {
+    gulp.src('./app/**/*.mst')
+        .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest('./public/'));
 });
 
 gulp.task('build', function () {
-    gulpSequence('clean', 'build-css', 'build-js', 'build-html', 'mv-img')(function (err) {
+    gulpSequence('clean', 'build-css', 'build-js', 'build-html', 'mv-img', 'mv-mst')(function (err) {
         if (err) {
             console.log('err');
         }
@@ -67,4 +75,5 @@ gulp.task('watch', function () {
     gulp.watch('./app/js/**/*.js', ['build-js']);
     gulp.watch('./app/**/*.html', ['build-html']);
     gulp.watch('./app/img/*.{jpg,png}', ['build-html']);
+    gulp.watch('./app/**/*.mst', ['mv-mst']);
 });
