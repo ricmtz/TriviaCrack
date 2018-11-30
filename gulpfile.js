@@ -9,7 +9,8 @@ const postcssPresetEnv = require('postcss-preset-env');
 const htmlmin = require('gulp-htmlmin');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
-var gulpSequence = require('gulp-sequence');
+const gulpSequence = require('gulp-sequence');
+const htmlreplace = require('gulp-html-replace');
 
 gulp.task('clean', function () {
     return gulp.src('./public/*')
@@ -30,6 +31,7 @@ gulp.task('minify-css', function () {
 
 gulp.task('minify-js', function () {
     gulp.src('./app/js/**/*.js')
+        .pipe(concat('index.js'))
         .pipe(babel({ presets: ['@babel/env'] }))
         .pipe(uglify())
         .pipe(gulp.dest('./public/js'));
@@ -43,6 +45,12 @@ gulp.task('mv-img', function () {
 gulp.task('minify-html', function () {
     gulp.src('./app/**/*.html')
         .pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(htmlreplace({
+            css: './public/css/styles.css',
+            js: './public/js/index.css',
+        }, {
+                resolvePaths: true,
+            }))
         .pipe(gulp.dest('./public/'));
 });
 
