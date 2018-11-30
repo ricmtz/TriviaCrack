@@ -309,7 +309,8 @@ select {
     }
 
     .nav-menu{
-        position: relative;
+      background-color: var(--secondary-color);
+      position: relative;
     }
 
     .nav-menu li {

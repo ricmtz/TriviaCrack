@@ -39,10 +39,23 @@ function itemMenuScroll(add){
     }
 }
 
+function changePictureWelcome(){
+    const picture = document.getElementById('welcome');
+    console.log(window.screen.width);
+    if (window.screen.width >= 550) {
+        picture.src = "img/welcome.png";
+    }
+    else {
+        picture.src = "img/welcome-mobile.png";
+    }
+}
+
 function loading(){
     const btn = document.getElementById('drop-menu');
     btn.addEventListener('click', show);
+    changePictureWelcome();
 }
 
 window.addEventListener('scroll',headerScroll);
 window.addEventListener('load', loading);
+window.addEventListener('resize', changePictureWelcome);
