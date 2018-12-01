@@ -48,7 +48,7 @@ gulp.task('build-html', function () {
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(htmlreplace({
             css: './css/styles.css',
-            js: './js/index.css',
+            js: './js/index.js',
         }, {
                 resolvePaths: true,
             }))
