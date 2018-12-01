@@ -291,8 +291,12 @@ select {
     }
 
     .nav-menu{
-      background-color: var(--secondary-color);
-      position: relative;
+        background-color: var(--secondary-color);
+        position: relative;
+    }
+
+    .nav-menu.scroller{
+        background-color: var(--main-color);
     }
 
     .nav-menu li {

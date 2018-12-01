@@ -1,21 +1,25 @@
+:root {
+    --name-text-color: #ec2a2a;
+    --text-shadow-color: #000;
+    --welcome-color: #000055;
+    --tutorial-color: #FFF;
+}
+
 h1 {
     font-size: 50px;
-    color: #ec2a2a;
-    text-shadow: 2px 2px #000000;
+    color: var(--name-text-color);
+    text-shadow: 2px 2px var(--text-shadow-color);
     display: inline;
 }
 
 h2 {
     font-size:  40px;
-    color: #000055;
+    color: var(--welcome-color);
 }
 
 h3 {
     font-size: 30px;
-    text-align: center;
 }
-
-/*  */
 
 .welcome-item {
     width: 100%;
@@ -35,12 +39,15 @@ h3 {
     margin: 5% 10%;
 }
 
-.picture-how{
+.picture-how {
     padding-left: 5%;
+    max-width: 50%;
 }
 
 .text-how {
-    padding-left: 7%;
+    padding: 15px 7%;
+    text-align: center;
+    color: var(--tutorial-color);
 }
 
 @media screen and (max-width: 800px) {
@@ -63,7 +70,7 @@ h3 {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
     h1 {
         display: none;
     }
