@@ -1,6 +1,6 @@
 <header>
     <div class="logo">
-      <a href="">
+      <a href="/">
         <img src="../img/logo.png" class="logo-item">
       </a>
       <div class="drop-opts">
