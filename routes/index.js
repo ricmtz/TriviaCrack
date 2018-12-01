@@ -1,11 +1,14 @@
 const { Router } = require('express');
+const generalsRoute = require('./generals');
 const usersRoute = require('./users');
-const { CtrlInformation } = require('../controllers');
+const gamesRoute = require('./games');
+const questionsRoute = require('./questions');
 
 const router = Router();
 
-router.get('/', CtrlInformation.indexPage);
-
 router.use(usersRoute);
+router.use(gamesRoute);
+router.use(questionsRoute);
+router.use(generalsRoute);
 
 module.exports = router;
