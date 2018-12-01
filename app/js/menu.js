@@ -25,7 +25,7 @@ function headerScroll() {
 
 function itemMenuScroll(add){
     const items = document.getElementsByTagName('a');
-    for (i of items) {
+    for (let i of items) {
         if (i.parentNode.parentNode.id === 'menu') {
             if (add) {
                 i.classList.add('scroller');
