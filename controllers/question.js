@@ -18,6 +18,23 @@ class Question {
         const html = Mustache.to_html(template, data, { menu, footer });
         res.send(html);
     }
+    
+    async addQuestionPage(req, res) {
+        const template = fs.readFileSync('public/views/add_question.mst').toString();
+        const menu = fs.readFileSync('public/partials/menu.mst').toString();
+        const footer = fs.readFileSync('public/partials/footer.mst').toString();
+        const data = {
+            nickname: req.cookies.nickname,
+            categories: [
+                {category: 'IA'},
+                {category: 'DB'},
+                {category: 'Software'},
+                {category: 'Web'},
+            ]
+        };
+        const html = Mustache.to_html(template, data, { menu, footer });
+        res.send(html);
+    }
 }
 
 module.exports = new Question();
