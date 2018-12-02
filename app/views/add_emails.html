@@ -13,10 +13,11 @@
     <link rel="stylesheet" href="../css/profile.css">
     <link rel="stylesheet" href="../css/buttons.css">
     <link rel="stylesheet" href="../css/inputs.css">
+    <link rel="stylesheet" href="../css/principal.css">
     <!-- endbuild -->
     <link rel="shortcut icon" href="../favicon.ico">
     <!-- build:js -->
-    <script src="../js/principal.js"></script>
+    <script src="js/menu.js"></script>
     <!-- endbuild -->
 </head>
 
@@ -25,12 +26,15 @@
     <main>
         <div class="base-container col-10">
             <div class="multiple-container">
-                <div class="col-12 tlt-center">
-                    <h1>Select Adversary</h1>
-                </div>
-            </div>
-            <div class="multiple-container list-friends">
-                {{>friends}}
+                <h1>{{nickname}}</h1>
+                <form action="" class="col-12">
+                    <div class="email-list">
+                        <input type="email" class="txt-input" placeholder="Write a new email">
+                        <button type="button" class="btn-submit">Add</button>
+                    </div>
+                </form>
+                {{>email_list}}
+                <br>
             </div>
         </div>
     </main>

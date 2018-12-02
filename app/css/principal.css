@@ -63,7 +63,7 @@ h3 {
 }
 
 @media screen and (max-width: 800px) {
-    h1 {
+    .intro h1 {
         font-size: 35px;
     }
 
@@ -82,8 +82,8 @@ h3 {
     }
 }
 
-@media screen and (max-width: 450px) {
-    h1 {
+@media screen and (max-width: 400px) {
+    .intro h1 {
         display: none;
     }
 
