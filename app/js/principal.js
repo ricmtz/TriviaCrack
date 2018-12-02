@@ -12,6 +12,7 @@ function headerScroll() {
     const options = document.getElementById('drop-menu');
     const menu = document.getElementById('menu');
     if (window.scrollY <= 100){
+      console.log(window.scrollY);
         header[0].classList.remove('scroller');
         options.classList.remove('scroller');
         menu.classList.remove('scroller');
@@ -24,8 +25,8 @@ function headerScroll() {
         menu.classList.add('scroller');
         menu.parentNode.classList.remove('menu');
         itemMenuScroll(true);
+        setTimeout(hideHeader,ITME_HIDE_HEADER);
     }
-    setTimeout(hideHeader,ITME_HIDE_HEADER);
 }
 
 function hideHeader() {
