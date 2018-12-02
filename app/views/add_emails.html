@@ -25,24 +25,17 @@
     {{>menu}}
     <main>
         <div class="base-container col-10">
-            <div class="multiple-container cont-data">
-                <div class="col-2 div-img">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Antu_im-invisible-user.svg/512px-Antu_im-invisible-user.svg.png"
-                        class="user-img">
-                </div>
-                <div class="col-10 cont-info">
-                    <h1>{{nickname}}</h1>
-                    <h2>{{email}}</h2>
-                    <p class="score">99999</p>
-                    <a href="/profile_edit" class="btn-a">
-                        <label>Edit <i class="fa fa-edit"></i></label>
-                    </a>
-                </div>
+            <div class="multiple-container">
+                <h1>{{nickname}}</h1>
+                <form action="" class="col-12">
+                    <div class="email-list">
+                        <input type="email" class="txt-input" placeholder="Write a new email">
+                        <button type="button" class="btn-submit">Add</button>
+                    </div>
+                </form>
+                {{>email_list}}
+                <br>
             </div>
-            <div class="multiple-container list-friends">
-                {{>friends}}
-            </div>
-
         </div>
     </main>
     {{>footer}}
