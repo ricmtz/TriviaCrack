@@ -58,6 +58,10 @@ h3 {
     color: var(--tutorial-color);
 }
 
+.no-visible {
+    display: none;
+}
+
 @media screen and (max-width: 800px) {
     h1 {
         font-size: 35px;

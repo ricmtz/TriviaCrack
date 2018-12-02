@@ -1,9 +1,12 @@
+const ITME_HIDE_HEADER = 3000;
+
 function show() {
     const menu = document.getElementById('menu');
     menu.classList.toggle('hide');
 }
 
 function headerScroll() {
+    document.getElementById('header').classList.remove('no-visible');
     const header = document.getElementsByTagName('header');
     const logo = document.getElementById('logo');
     const options = document.getElementById('drop-menu');
@@ -22,6 +25,11 @@ function headerScroll() {
         menu.parentNode.classList.remove('menu');
         itemMenuScroll(true);
     }
+    setTimeout(hideHeader,ITME_HIDE_HEADER);
+}
+
+function hideHeader() {
+    document.getElementById('header').classList.add('no-visible');
 }
 
 function itemMenuScroll(add){
