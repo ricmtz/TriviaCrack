@@ -42,7 +42,8 @@
 }
 
 .tlt-friend{
-    font-size: 30px;
+    text-align: center;
+    margin: 15px 5px;
 }
 
 .form-add-friend {
@@ -106,7 +107,7 @@
 }
 
 .tlt-center {
-    font-size: 34px;
+    /* font-size: 34px; */
     text-align: center;
     margin: 10px 0;
 }
