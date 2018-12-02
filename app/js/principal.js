@@ -5,13 +5,16 @@ function show() {
     menu.classList.toggle('hide');
 }
 
+let hide;
 function headerScroll() {
     document.getElementById('header').classList.remove('no-visible');
+    window.clearTimeout(hide);
     const header = document.getElementsByTagName('header');
     const logo = document.getElementById('logo');
     const options = document.getElementById('drop-menu');
     const menu = document.getElementById('menu');
     if (window.scrollY <= 100){
+        clearTimeout(hide);
         header[0].classList.remove('scroller');
         options.classList.remove('scroller');
         menu.classList.remove('scroller');
@@ -24,8 +27,8 @@ function headerScroll() {
         menu.classList.add('scroller');
         menu.parentNode.classList.remove('menu');
         itemMenuScroll(true);
+        hide = setTimeout(hideHeader,ITME_HIDE_HEADER);
     }
-    setTimeout(hideHeader,ITME_HIDE_HEADER);
 }
 
 function hideHeader() {
