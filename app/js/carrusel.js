@@ -2,9 +2,9 @@ let slideIndex = 0;
 const TIME_SLIDE = 5000;
 let length = 0;
 
-window.addEventListener('load',loading);
+window.addEventListener('load',loadingCarrusel);
 
-function loading(){
+function loadingCarrusel(){
     showSlides();
     pagesEvent();
 }

@@ -56,7 +56,7 @@ function changePictureWelcome(){
     }
 }
 
-function loading(){
+function loadingPrincipal(){
     const btn = document.getElementById('drop-menu');
     btn.addEventListener('click', show);
     changePictureWelcome();
@@ -64,4 +64,4 @@ function loading(){
 
 
 window.addEventListener('scroll',headerScroll);
-window.addEventListener('load', loading);
+window.addEventListener('load', loadingPrincipal);
