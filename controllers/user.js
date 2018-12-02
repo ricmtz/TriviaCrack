@@ -23,6 +23,7 @@ class User {
         const data = {
             nickname: req.cookies.nickname,
             email: 'asas@gmail.com',
+            score: 123456789,
             personal: true,
             friends: [
                 {
