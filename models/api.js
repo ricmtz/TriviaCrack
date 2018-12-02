@@ -1,22 +1,22 @@
 const fetch = require('node-fetch');
 
 class API {
-    async getMethod(url='', options={}) {
+    async getMethod(url='', body={}, header={}) {
         fetch('https://rickandmortyapi.com/api/character/')
             .then(res => res.json())
             .then((res) => { console.log(res); })
             .catch(err => console.log(err));
     }
 
-    async postMethod(url, options) {
+    async postMethod(url, body={}, header={}) {
 
     }
 
-    async patchMethod(url, options) {
+    async patchMethod(url, body={}, header={}) {
 
     }
 
-    async delMethod(url, options) {
+    async delMethod(url, body={}, header={}) {
 
     }
 }
