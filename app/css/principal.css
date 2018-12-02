@@ -39,9 +39,17 @@ h3 {
     margin: 5% 10%;
 }
 
+.how-container {
+    margin: 0 10%;
+}
+
 .picture-how {
     padding-left: 5%;
-    max-width: 50%;
+    padding-right: 5%;
+}
+.picture-how.picture {
+    max-height: 100px;
+    max-width: 50px;
 }
 
 .text-how {

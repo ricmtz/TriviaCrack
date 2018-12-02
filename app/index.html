@@ -16,7 +16,8 @@
   <link rel="shortcut icon" href="favicon.ico">
   <!-- endbuild -->
   <!-- build:js -->
-  <script src="js/menu.js"></script>
+  <script src="js/principal.js"></script>
+  <script src="js/carrusel.js"></script>
   <!-- endbuild -->
 </head>
 
@@ -61,27 +62,59 @@
       <div class="col-12 text-how">
         <h3>How to play</h3>
       </div>
-      <div class="slides fade">
-        <div  class="multiple-container">
-          <div class="col-6 picture-how">
-            <img id="picture-how" src="img/how to play.jpg" class="col-12">
+      <div class="slides fade col-12 visible">
+        <div  class="multiple-container how-container">
+          <div class="col-4 picture-how">
+            <img id="picture-how" src="img/test-picture.png" class="picture col-12">
           </div>
-          <div class="col-4 text-how">
-            <br />
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod temp or incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim.
+          <div class="col-6 text-how">
+            <p>
+              The wheel is split into six sections. These sections representing
+              each of the categories: Data Base, History, Networks, Web, Logic
+              and Software Engineering.
             </p>
           </div>
         </div>
       </div>
-      <div class="slides fade">
-        <img src="" class="col-12">
+      <div class="slides fade col-12">
+        <div  class="multiple-container how-container">
+          <div class="col-4 picture-how">
+            <img id="picture-how" src="img/test-picture.png" class="col-12">
+          </div>
+          <div class="col-4 text-how">
+            <p>
+              When the wheel stops on a set category, the player will have to
+              answer one question form said caterory.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="slides fade">
+      <div class="slides fade col-12">
+        <div  class="multiple-container how-container">
+          <div class="col-4 picture-how">
+            <img id="picture-how" src="img/test-picture.png" class="col-12">
+          </div>
+          <div class="col-4 text-how">
+            <br />
+            <p>
+              Every correct answer will add one point for the score.
+            </p>
+          </div>
+        </div>
       </div>
-      <!--<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+      <div class="slides fade col-12">
+        <div  class="multiple-container how-container">
+          <div class="col-4 picture-how">
+            <img id="picture-how" src="img/test-picture.png" class="col-12">
+          </div>
+          <div class="col-4 text-how">
+            <br />
+            <p>
+              Win the player ...
+            </p>
+          </div>
+        </div>
+      </div>
 
       <div class="owl-controls">
         <div class="owl-pagination">
@@ -101,23 +134,6 @@
       </div>
 
     </div>
-    <script>
-    var slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-           var i;
-           var slides = document.getElementsByClassName("slides");
-           for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-           }
-           slideIndex++;
-           if(slideIndex > slides.length) {slideIndex = 1}
-           slides[slideIndex-1].style.display = "block";
-           setTimeout(showSlides,7000);
-    }
-    </script>
-
 
 
   </main>

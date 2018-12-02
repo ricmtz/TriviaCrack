@@ -16,8 +16,12 @@
     padding-bottom: 15px;
 }
 
-.slides{
-    display:none;
+.slides {
+    display: none;
+}
+
+.visible {
+    display: block;
 }
 
 .prev, .next{

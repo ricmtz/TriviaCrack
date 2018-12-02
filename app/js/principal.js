@@ -57,4 +57,3 @@ function loading(){
 
 window.addEventListener('scroll',headerScroll);
 window.addEventListener('load', loading);
-window.addEventListener('resize', changePictureWelcome);
