@@ -45,6 +45,7 @@
     "gulp-sequence": "^1.0.0",
     "gulp-uglify": "^3.0.1",
     "nodemon": "^1.18.7",
-    "postcss-preset-env": "^6.4.0"
+    "postcss-preset-env": "^6.4.0",
+    "pump": "^3.0.0"
   }
 }
