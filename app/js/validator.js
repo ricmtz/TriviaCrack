@@ -65,30 +65,32 @@ function apiLogin(nick, pass) {
         })
 }
 
+function valInputLogin() {
+    const formLogin = document.getElementById('form-login');
+    const nicknameInput = formLogin.elements.namedItem('nickname');
+    const passwordInput = formLogin.elements.namedItem('password');
+    let correct = true;
+    if (!valNickname(nicknameInput.value)) {
+        invalitInput(nicknameInput);
+        correct = false;
+    } else {
+        valitInput(nicknameInput);
+    }
+    if (!valNickname(passwordInput.value)) {
+        invalitInput(passwordInput);
+        correct = false;
+    } else {
+        valitInput(passwordInput);
+    }
+    if (correct) {
+        apiLogin(nicknameInput.value, passwordInput.value);
+    }
+}
+
 function validateLoginForm() {
     try {
         const btnLogin = document.getElementById('btn-login');
-        const formLogin = document.getElementById('form-login');
-        const nicknameInput = formLogin.elements.namedItem('nickname');
-        const passwordInput = formLogin.elements.namedItem('password');
-        btnLogin.addEventListener('click', function () {
-            let correct = true;
-            if (!valNickname(nicknameInput.value)) {
-                invalitInput(nicknameInput);
-                correct = false;
-            } else {
-                valitInput(nicknameInput);
-            }
-            if (!valNickname(passwordInput.value)) {
-                invalitInput(passwordInput);
-                correct = false;
-            } else {
-                valitInput(passwordInput);
-            }
-            if (correct) {
-                apiLogin(nicknameInput.value, passwordInput.value);
-            }
-        });
+        btnLogin.addEventListener('click', valInputLogin);
     } catch (error) {
 
     }
@@ -102,7 +104,7 @@ function apiLogout() {
             if (res.status === 200) {
                 window.location = res.url;
             } else {
-                await res.json().then((msg) => {
+                res.json().then((msg) => {
                     window.alert(msg.body.data)
                 });
             }
@@ -114,6 +116,43 @@ function leaveSession() {
     try {
         const btn = document.getElementById('btn-logout');
         btn.addEventListener('click', apiLogout);
+    } catch (error) {
+    }
+}
+
+
+window.addEventListener('load', validateRegForm);
+
+function apiRegister() {
+
+}
+
+function validateRegData() {
+    const inptNick = document.getElementById('new-nickname');
+    const inptEmail = document.getElementById('new-email');
+    const inptPass = document.getElementById('new-password');
+    let correct = true;
+    if(!valNickname(inptNick.value)){
+        invalitInput(inptNick);
+    }else{
+        valitInput(inptNick);
+    }
+    if(!valEmail(inptEmail.value)){
+        invalitInput(inptEmail);
+    }else{
+        valitInput(inptEmail);
+    }
+    if(!valPassword(inptPass.value)){
+        invalitInput(inptPass);
+    }else{
+        valitInput(inptPass);
+    }
+}
+
+function validateRegForm() {
+    try {
+        const btn = document.getElementById('btn-register');
+        btn.addEventListener('click', validateRegData);
     } catch (error) {
     }
 }

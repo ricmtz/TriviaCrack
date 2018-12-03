@@ -149,20 +149,19 @@
         <div class="login-text">
           <h2 class="login-text">Create new account</h2>
         </div>
-        <form class="login-form" action="index.html" method="post">
+        <form id="form-register" class="login-form" action="/register" method="post">
           <div class="input-container">
-            <input class="txt-input col-12" type="text" name="username" value="" autocomplete="username" autofocus="1"
-              placeholder="Username">
+            <input class="txt-input col-12" type="text" name="username" value="" autocomplete="username" autofocus="1" placeholder="Username" id="new-nickname">
           </div>
           <div class="input-container">
-            <input class="txt-input col-12" type="email" name="email" value="" placeholder="Email">
+            <input class="txt-input col-12" type="email" name="email" value="" placeholder="Email" id="new-email">
           </div>
           <div class="input-container">
-            <input class="txt-input col-12" type="password" name="password" value="" placeholder="Password">
+            <input class="txt-input col-12" type="password" name="password" value="" placeholder="Password" id="new-password">
           </div>
           <div class="multiple-container button-container col-12">
             <div class="col-6">
-              <button class="button-1 col-12" value="1" type="button" name="register" type="submit">Create</button>
+              <button class="button-1 col-12" value="1" type="button" name="register" type="button" id="btn-register">Create</button>
             </div>
             <div class="txt-container col-6">
               <p>
