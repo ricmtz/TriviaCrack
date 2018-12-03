@@ -86,6 +86,17 @@ class User {
         const html = Mustache.to_html(template, data, { menu, footer, email_list });
         res.send(html);
     }
+
+    async getUsers(req, res) {
+        const template = fs.readFileSync('public/views/users/index.mst').toString();
+        const menu = fs.readFileSync('public/partials/menu.mst').toString();
+        const menuadmin = fs.readFileSync('public/partials/menu_admin.mst').toString();
+        const footer = fs.readFileSync('public/partials/footer.mst').toString();
+        const data = {
+        };
+        const html = Mustache.to_html(template, data, { menu, menuadmin, footer });
+        res.send(html);
+    }
 }
 
 module.exports = new User();

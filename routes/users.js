@@ -6,10 +6,12 @@ router.post('/login', CtrlUser.login);
 router.get('/logout', CtrlUser.logout);
 // router.get('/register', CtrlUser.registerPage);
 router.get('/profile', CtrlUser.profilePage);
-router.post('/profile', function (req, res) {
+router.post('/profile', function(req, res){
     res.send('Not implemented')
 });
 router.get('/profile/edit', CtrlUser.profileEditPage);
 router.get('/profile/add_emails', CtrlUser.addEmailsPage);
+
+router.get('/users', CtrlUser.getUsers);
 
 module.exports = router;

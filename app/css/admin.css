@@ -46,14 +46,30 @@ hr{
 }
 
 /* Menu administrador */
+span {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.hide-menu {
+    max-width: 0;
+}
+
 .menu-admin {
-    margin-left: 2%;
-    margin-top: 10px;
+    position: fixed;
+    height: 100%;
+    width:  200px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.4s;
+    -o-transition: 0.4s;
+    box-sizing: border-box;
 }
 
 ul.menu-admin {
     background-color: #112F41;
-    border-radius: 5px;
     list-style: none;
 }
 
@@ -74,6 +90,11 @@ ul.menu-admin a:hover{
     color: #112F41;
     background-color: #F2B134;
     border-radius: 5px;
+}
+
+.hide-mneu {
+    color: #000;
+    font-size: 1rem;
 }
 
 /* tablas */
