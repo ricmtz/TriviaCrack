@@ -226,8 +226,13 @@ select {
 .base-container {
   background-color: var(--cont-color);
   padding: 2%;
-  margin: 15vh auto 1%;
+  margin: 15vh auto 0;
   box-shadow: 1px 1px 2px 0px var(--highlight-color);
+  min-height: 70px;
+}
+
+.new-container {
+  margin: 0 auto;
 }
 
 .mini-container {

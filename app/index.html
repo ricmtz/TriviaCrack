@@ -109,16 +109,71 @@
       </div>
 
     </div>
-
-    <a href="#openModal">Lanzar el modal</a>
-
-    <div id="openModal" class="modalDialog">
-    	<div>
-    		<a href="#close" title="Close" class="close">X</a>
-    		<h2>Mi modal</h2>
-    		<p>Este es un ejemplo de modal, creado gracias al poder de CSS3.</p>
-    		<p>Puedes hacer un montón de cosas aquí, como alertas o incluso crear un formulario de registro aquí mismo.</p>
+    
+    <div id="login" class="modal-dialog">
+      <div class="base-container col-4">
+      	<a href="#close" title="Close" class="close">X</a>
+        <div class="login-text">
+          <h2 class="login-text">Log In</h2>
+        </div>
+        <form class="login-form" action="index.html" method="post">
+          <div class="input-container">
+            <input class="txt-input col-12" type="text" name="username" value="" autocomplete="username" autofocus="1"
+            placeholder="Username">
+          </div>
+          <div class="input-container">
+            <input class="txt-input col-12" type="password" name="password" value="" placeholder="Password">
+          </div>
+          <div class="button-container">
+            <a href="#">
+              <button class="button-1 col-12" value="1" type="button" name="login" type="submit">Log In</button>
+            </a>
+          </div>
+        </form>
+        <div class="txt-container">
+          <a id="forgot-password-link" href="">Forgot your password?</a>
+        </div>
+      </div>
+      <div class="base-container new-container col-4">
+        <div class="txt-container">
+          <p>
+            New to Trivia Crack?
+            <a href="#singin">Sign up</a>
+          </p>
+        </div>
     	</div>
+    </div>
+
+    <div id="singin" class="modal-dialog">
+      <div class="base-container col-4">
+      	<a href="#close" title="Close" class="close">X</a>
+        <div class="login-text">
+          <h2 class="login-text">Create new account</h2>
+        </div>
+        <form class="login-form" action="index.html" method="post">
+          <div class="input-container">
+            <input class="txt-input col-12" type="text" name="username" value="" autocomplete="username" autofocus="1"
+              placeholder="Username">
+          </div>
+          <div class="input-container">
+            <input class="txt-input col-12" type="email" name="email" value="" placeholder="Email">
+          </div>
+          <div class="input-container">
+            <input class="txt-input col-12" type="password" name="password" value="" placeholder="Password">
+          </div>
+          <div class="multiple-container button-container col-12">
+            <div class="col-6">
+              <button class="button-1 col-12" value="1" type="button" name="register" type="submit">Create</button>
+            </div>
+            <div class="txt-container col-6">
+              <p>
+                or
+                <a href="#login">Log In</a>
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
 
   </main>
