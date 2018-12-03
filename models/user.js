@@ -17,7 +17,7 @@ class User {
         const url = `${process.env.HOST}/logout`;
         const response = await API.getMethod(url, header)
             .catch((err) => { });
-        console.log(response);
+        console.log('logout', response);
         return response;
     }
 }

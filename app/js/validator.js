@@ -102,7 +102,9 @@ function apiLogout() {
             if (res.status === 200) {
                 window.location = res.url;
             } else {
-                window.alert('asdd');
+                await res.json().then((msg) => {
+                    window.alert(msg.body.data)
+                });
             }
         });
 

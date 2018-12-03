@@ -28,7 +28,7 @@ class API {
         };
         let result = {};
         await request(options, (error, response, body) => {
-            console.log(body);
+            // console.log(body);
             result = { statusCode: response.statusCode, body: JSON.parse(body) };
         });
         return result;
