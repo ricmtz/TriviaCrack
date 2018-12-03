@@ -90,18 +90,11 @@ class User {
     async getUsers(req, res) {
         const template = fs.readFileSync('public/views/users/index.mst').toString();
         const menu = fs.readFileSync('public/partials/menu.mst').toString();
-        const menuAdmin = fs.readFileSync('public/partials/menu_admin.mst').toString();
+        const menuadmin = fs.readFileSync('public/partials/menu_admin.mst').toString();
         const footer = fs.readFileSync('public/partials/footer.mst').toString();
         const data = {
-            nickname: req.cookies.nickname,
-            email: 'asas@gmail.com',
-            emails: [
-                { email: 'asas@gmail.com' },
-                { email: 'qweqwe@gmail.com' },
-                { email: '123232asd@gmail.com' },
-            ]
         };
-        const html = Mustache.to_html(template, data, { menu, menuAdmin, footer });
+        const html = Mustache.to_html(template, data, { menu, menuadmin, footer });
         res.send(html);
     }
 }
