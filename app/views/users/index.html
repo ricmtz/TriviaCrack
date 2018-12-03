@@ -15,6 +15,7 @@
     <link rel="shortcut icon" href="../../favicon.ico">
   <!-- endbuild -->
   <!-- build:js -->
+    <script src="../../js/menu-admin.js"></script>
   <!-- endbuild -->
 </head>
 
@@ -22,14 +23,7 @@
     {{>menu}}
     <main>
         <div class="container">
-            <div class="col-2 menu-admin">
-                <ul class="menu-admin col-12">
-                    <li><a href="../users/index.html">Users</a></li>
-                    <li><a href="../games/index.html">Games</a></li>
-                    <li><a href="../questions/index.html">Questions</a></li>
-                    <li><a href="../categories/index.html">Categories</a></li>
-                </ul>
-            </div>
+            {{>menuAdmin}}
             <div class="col-1"></div>
             <section class="col-9 container">
                 <h1>Users</h1>

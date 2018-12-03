@@ -7,7 +7,7 @@ class General {
         const menu = fs.readFileSync('public/partials/menu.mst').toString();
         const footer = fs.readFileSync('public/partials/footer.mst').toString();
         const data = {
-            nickname: req.cookies.nickname,
+            // nickname: req.cookies.nickname,
         };
         const html = Mustache.to_html(template, data, { menu, footer });
         res.send(html);

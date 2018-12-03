@@ -1,7 +1,23 @@
 const fs = require('fs');
 const Mustache = require('mustache');
+const { MdlUser } = require('../models');
 
 class User {
+
+    async login(req, res) {
+        const nickname = req.body.nickname;
+        const result = await MdlUser.login(req);
+        if (result.statusCode === 200) {
+            res.cookie('token', result.body.token);
+            res.cookie('nickname', nickname);
+            res.redirect('/profile');
+        } else if(result.statusCode === 409){
+            console.log('asdasd');
+            res.status(409).send(result);
+        }
+        // res.send(result);
+    }
+
     async loginPage(req, res) {
         const template = fs.readFileSync('./public/views/login.mst').toString();
         const menu = fs.readFileSync('./public/partials/menu.mst').toString();
@@ -75,6 +91,24 @@ class User {
             ]
         };
         const html = Mustache.to_html(template, data, { menu, footer, email_list });
+        res.send(html);
+    }
+
+    async getUsers(req, res) {
+        const template = fs.readFileSync('public/views/users/index.mst').toString();
+        const menu = fs.readFileSync('public/partials/menu.mst').toString();
+        const menuAdmin = fs.readFileSync('public/partials/menu_admin.mst').toString();
+        const footer = fs.readFileSync('public/partials/footer.mst').toString();
+        const data = {
+            nickname: req.cookies.nickname,
+            email: 'asas@gmail.com',
+            emails: [
+                { email: 'asas@gmail.com' },
+                { email: 'qweqwe@gmail.com' },
+                { email: '123232asd@gmail.com' },
+            ]
+        };
+        const html = Mustache.to_html(template, data, { menu, menuAdmin, footer });
         res.send(html);
     }
 }
