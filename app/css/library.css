@@ -328,7 +328,7 @@ select {
 
     .sub-item a {
         padding: 0;
-        color: #ffffff;
+        color: var(--main-color);;
     }
 
 }
