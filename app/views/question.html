@@ -22,29 +22,26 @@
 <body>
     {{>menu}}
     <main>
-        <section class="base-container">
+        <section class="base-container col-10">
             <div class="multiple-container">
                 <div class="col-12">
                     <div class="multiple-container tlt-cat">
-                        <img src="https://vignette.wikia.nocookie.net/es.pokemon/images/2/2c/Pok%C3%A9mon_Jukebox_icono.png/revision/latest?cb=20150624132304"
-                            class="col-1 img-cat">
+                        <img src="{{{img}}}" class="col-1 img-cat">
                         <div class="col-11">
-                            <h1>Category</h1>
+                            <h1>{{category}}</h1>
                         </div>
                     </div>
                     <div class="question">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel consequuntur quibusdam et animi
-                            laboriosam dolore adipisci vero facilis quos quis, sint quam, mollitia fugit fuga veniam
-                            nam esse, quas architecto.</p>
+                        <p>{{question}}</p>
                         <form action="">
                             <button class="btn-option">
-                                Python
+                                {{opc1}}
                             </button>
                             <button class="btn-option">
-                                Java
+                                {{opc2}}
                             </button>
                             <button class="btn-option">
-                                C++
+                                {{opc3}}
                             </button>
                         </form>
                     </div>

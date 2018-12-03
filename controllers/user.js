@@ -11,7 +11,10 @@ class User {
     }
 
     async registerPage(req, res) {
-        const html = fs.readFileSync('./public/views/register.mst').toString();
+        const template = fs.readFileSync('./public/views/register.mst').toString();
+        const menu = fs.readFileSync('./public/partials/menu.mst').toString();
+        const footer = fs.readFileSync('./public/partials/footer.mst').toString();
+        const html = Mustache.to_html(template, {}, { menu, footer });
         res.send(html);
     }
 
@@ -23,6 +26,7 @@ class User {
         const data = {
             nickname: req.cookies.nickname,
             email: 'asas@gmail.com',
+            score: 123456789,
             personal: true,
             friends: [
                 {
