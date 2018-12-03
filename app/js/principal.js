@@ -60,9 +60,13 @@ function changePictureWelcome(){
 }
 
 function loadingPrincipal(){
-    const btn = document.getElementById('drop-menu');
-    btn.addEventListener('click', show);
-    changePictureWelcome();
+    try {
+        const btn = document.getElementById('drop-menu');
+        btn.addEventListener('click', show);
+        changePictureWelcome();
+    } catch (error) {
+        
+    }
 }
 
 
