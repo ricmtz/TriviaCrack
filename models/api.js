@@ -14,12 +14,15 @@ class API {
             method: 'POST',
             url,
             headers: { ...header },
-            form: { ...body }
+            form: { ...body },
+            simple: false,
         };
         let result = {};
         await request(options, (error, response, body) => {
-            result = { statusCode: response.statusCode, body };
+            console.log(body);
+            result = { statusCode: response.statusCode, body: JSON.parse(body) };
         });
+        console.log(result);
         return result;
     }
 

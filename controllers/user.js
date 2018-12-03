@@ -5,13 +5,17 @@ const { MdlUser } = require('../models');
 class User {
 
     async login(req, res) {
+        const nickname = req.body.nickname;
         const result = await MdlUser.login(req);
-        if(result.statusCode === 200) {
+        if (result.statusCode === 200) {
             res.cookie('token', result.body.token);
-            res.cookie('nickname', req.body.nickname);
+            res.cookie('nickname', nickname);
             res.redirect('/profile');
+        } else if(result.statusCode === 409){
+            console.log('asdasd');
+            res.status(409).send(result);
         }
-        res.send(result);
+        // res.send(result);
     }
 
     async loginPage(req, res) {

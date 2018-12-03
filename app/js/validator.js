@@ -74,8 +74,14 @@ function validateLoginForm() {
                 const body = new URLSearchParams(data).toString();
                 API.post('/login', body, header)
                     .then((res) => {
-                        console.log(res);
-                        window.location = res.url;
+                        if (res.status === 200) {
+                            window.location = res.url;
+                        } else {
+                            res.json().then((msg) => {
+                                window.alert(msg.body.data)
+                            });
+
+                        }
                     })
             }
         });
