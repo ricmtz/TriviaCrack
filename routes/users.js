@@ -3,7 +3,7 @@ const { CtrlUser } = require('../controllers');
 const router = Router();
 
 router.post('/login', CtrlUser.login);
-router.get('/logout', function (req, res) { });
+router.get('/logout', CtrlUser.logout);
 // router.get('/register', CtrlUser.registerPage);
 router.get('/profile', CtrlUser.profilePage);
 router.post('/profile', function (req, res) {

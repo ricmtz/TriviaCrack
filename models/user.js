@@ -10,6 +10,16 @@ class User {
             .catch((err) => { });
         return response;
     }
+    async logout(req) {
+        const header = {
+            token: req.cookies.token,
+        }
+        const url = `${process.env.HOST}/logout`;
+        const response = await API.getMethod(url, header)
+            .catch((err) => { });
+        console.log(response);
+        return response;
+    }
 }
 
 module.exports = new User();
