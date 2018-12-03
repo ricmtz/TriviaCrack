@@ -22,7 +22,6 @@ class API {
             console.log(body);
             result = { statusCode: response.statusCode, body: JSON.parse(body) };
         });
-        console.log(result);
         return result;
     }
 

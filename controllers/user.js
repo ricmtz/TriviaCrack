@@ -18,22 +18,6 @@ class User {
         // res.send(result);
     }
 
-    async loginPage(req, res) {
-        const template = fs.readFileSync('./public/views/login.mst').toString();
-        const menu = fs.readFileSync('./public/partials/menu.mst').toString();
-        const footer = fs.readFileSync('./public/partials/footer.mst').toString();
-        const html = Mustache.to_html(template, {}, { menu, footer });
-        res.send(html);
-    }
-
-    async registerPage(req, res) {
-        const template = fs.readFileSync('./public/views/register.mst').toString();
-        const menu = fs.readFileSync('./public/partials/menu.mst').toString();
-        const footer = fs.readFileSync('./public/partials/footer.mst').toString();
-        const html = Mustache.to_html(template, {}, { menu, footer });
-        res.send(html);
-    }
-
     async profilePage(req, res) {
         const template = fs.readFileSync('public/views/profile.mst').toString();
         const menu = fs.readFileSync('public/partials/menu.mst').toString();
