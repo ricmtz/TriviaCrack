@@ -26,17 +26,17 @@
       <div class="login-text">
         <h1 class="login-text">Log In</h1>
       </div>
-      <form class="login-form" action="index.html" method="post">
+      <form id="form-login" class="login-form" action="/login" method="POST">
         <div class="input-container">
-          <input class="txt-input col-12" type="text" name="username" value="" autocomplete="username" autofocus="1"
-            placeholder="Username">
+          <input class="txt-input col-12" type="text" name="nickname" value="" autocomplete="username" autofocus="1"
+            placeholder="Username" id='nickname' required>
         </div>
         <div class="input-container">
-          <input class="txt-input col-12" type="password" name="password" value="" placeholder="Password">
+          <input class="txt-input col-12" type="password" name="password" value="" placeholder="Password" id="password" required>
         </div>
         <div class="button-container">
           <a href="#">
-            <button class="button-1 col-12" value="1" type="button" name="login" type="submit">Log In</button>
+            <button id="btn-login" class="button-1 col-12" type="button">Log In</button>
           </a>
         </div>
       </form>
