@@ -1,7 +1,19 @@
 const fs = require('fs');
 const Mustache = require('mustache');
+const { MdlUser } = require('../models');
 
 class User {
+
+    async login(req, res) {
+        const result = await MdlUser.login(req);
+        if(result.statusCode === 200) {
+            res.cookie('token', result.body.token);
+            res.cookie('nickname', req.body.nickname);
+            res.redirect('/profile');
+        }
+        res.send(result);
+    }
+
     async loginPage(req, res) {
         const template = fs.readFileSync('./public/views/login.mst').toString();
         const menu = fs.readFileSync('./public/partials/menu.mst').toString();

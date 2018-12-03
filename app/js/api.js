@@ -1,11 +1,12 @@
 class API {
-    static post(url='', req={}) {
+    static post(url='', body={}, header={}) {
         return fetch(url, {
             method: 'POST',
+            rejectUnauthorized:false,
             headers: {
-                "Content-Type": "application/x-www-form-urlencoded",
+                ...header,
             },
-            body: "asd=123& qweq=123asd3",
+            body,
         });
     }
 }

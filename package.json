@@ -23,7 +23,9 @@
     "express": "^4.16.4",
     "mustache": "^3.0.1",
     "mustache-express": "^1.2.8",
-    "node-fetch": "^2.3.0"
+    "node-fetch": "^2.3.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",

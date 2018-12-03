@@ -50,27 +50,33 @@ function validateLoginForm() {
     try {
         const btnLogin = document.getElementById('btn-login');
         const formLogin = document.getElementById('form-login');
-        const nickname = formLogin.elements.namedItem('nickname');
-        const password = formLogin.elements.namedItem('password');
+        const nicknameInput = formLogin.elements.namedItem('nickname');
+        const passwordInput = formLogin.elements.namedItem('password');
         btnLogin.addEventListener('click', function () {
             let correct = true;
-            if(!valNickname(nickname.value)){
-                invalitInput(nickname);
+            if (!valNickname(nicknameInput.value)) {
+                invalitInput(nicknameInput);
                 correct = false;
             } else {
-                valitInput(nickname);
+                valitInput(nicknameInput);
             }
-            if(!valNickname(password.value)){
-                invalitInput(password);
+            if (!valNickname(passwordInput.value)) {
+                invalitInput(passwordInput);
                 correct = false;
             } else {
-                valitInput(password);
+                valitInput(passwordInput);
             }
-            if(correct){
-                API.post('/login').then((res) => {
-                    console.log(res);
-                    // window.location = res.url;
-                })
+            if (correct) {
+                const header = {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                }
+                const data = { nickname: nicknameInput.value, password: passwordInput.value };
+                const body = new URLSearchParams(data).toString();
+                API.post('/login', body, header)
+                    .then((res) => {
+                        console.log(res);
+                        window.location = res.url;
+                    })
             }
         });
     } catch (error) {
