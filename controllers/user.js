@@ -11,27 +11,20 @@ class User {
             res.cookie('token', result.body.token);
             res.cookie('nickname', nickname);
             res.redirect('/profile');
-        } else if(result.statusCode === 409){
-            console.log('asdasd');
+        } else if (result.statusCode === 409) {
             res.status(409).send(result);
         }
-        // res.send(result);
     }
 
-    async loginPage(req, res) {
-        const template = fs.readFileSync('./public/views/login.mst').toString();
-        const menu = fs.readFileSync('./public/partials/menu.mst').toString();
-        const footer = fs.readFileSync('./public/partials/footer.mst').toString();
-        const html = Mustache.to_html(template, {}, { menu, footer });
-        res.send(html);
-    }
-
-    async registerPage(req, res) {
-        const template = fs.readFileSync('./public/views/register.mst').toString();
-        const menu = fs.readFileSync('./public/partials/menu.mst').toString();
-        const footer = fs.readFileSync('./public/partials/footer.mst').toString();
-        const html = Mustache.to_html(template, {}, { menu, footer });
-        res.send(html);
+    async logout(req, res) {
+        const result = await MdlUser.logout(req);
+        if (result.statusCode === 200) {
+            res.clearCookie('token');
+            res.clearCookie('nickname');
+            res.redirect('/');
+        } else {
+            res.status(409).send(result);
+        }
     }
 
     async profilePage(req, res) {

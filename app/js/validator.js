@@ -1,5 +1,3 @@
-window.addEventListener('load', validateLoginForm);
-
 function invalitInput(node) {
     node.classList.add('incorrect');
 }
@@ -46,6 +44,27 @@ function valEmail(data) {
     return (VALITATIONS.email.test(data))
 }
 
+window.addEventListener('load', validateLoginForm);
+
+function apiLogin(nick, pass) {
+    const header = {
+        "Content-Type": "application/x-www-form-urlencoded",
+    }
+    const data = { nickname: nick, password: pass };
+    const body = new URLSearchParams(data).toString();
+    API.post('/login', body, header)
+        .then((res) => {
+            if (res.status === 200) {
+                window.location = res.url;
+            } else {
+                res.json().then((msg) => {
+                    window.alert(msg.body.data)
+                });
+
+            }
+        })
+}
+
 function validateLoginForm() {
     try {
         const btnLogin = document.getElementById('btn-login');
@@ -67,22 +86,7 @@ function validateLoginForm() {
                 valitInput(passwordInput);
             }
             if (correct) {
-                const header = {
-                    "Content-Type": "application/x-www-form-urlencoded",
-                }
-                const data = { nickname: nicknameInput.value, password: passwordInput.value };
-                const body = new URLSearchParams(data).toString();
-                API.post('/login', body, header)
-                    .then((res) => {
-                        if (res.status === 200) {
-                            window.location = res.url;
-                        } else {
-                            res.json().then((msg) => {
-                                window.alert(msg.body.data)
-                            });
-
-                        }
-                    })
+                apiLogin(nicknameInput.value, passwordInput.value);
             }
         });
     } catch (error) {
@@ -90,7 +94,26 @@ function validateLoginForm() {
     }
 }
 
-function apiLogin(user, password) {
-    console.log(user, password);
-    return false;
+window.addEventListener('load', leaveSession);
+
+function apiLogout() {
+    API.get('/logout')
+        .then((res) => {
+            if (res.status === 200) {
+                window.location = res.url;
+            } else {
+                await res.json().then((msg) => {
+                    window.alert(msg.body.data)
+                });
+            }
+        });
+
+}
+
+function leaveSession() {
+    try {
+        const btn = document.getElementById('btn-logout');
+        btn.addEventListener('click', apiLogout);
+    } catch (error) {
+    }
 }

@@ -2,11 +2,20 @@ const fetch = require('node-fetch');
 const request = require('request-promise');
 
 class API {
-    async getMethod(url = '', body = {}, headers = {}) {
-        fetch('https://rickandmortyapi.com/api/character/')
-            .then(res => res.json())
-            .then((res) => { console.log(res); })
-            .catch(err => console.log(err));
+    async getMethod(url = '', header = {}) {
+        const options = {
+            method: 'GET',
+            url,
+            headers: { ...header },
+            simple: false,
+        };
+        let result = {};
+        await request(options, (error, response, body) => {
+            console.log(body);
+            result = { statusCode: response.statusCode, body: JSON.parse(body || '{}') };
+        });
+        console.log('asdasd', result);
+        return result;
     }
 
     async postMethod(url, body = {}, header = {}) {
@@ -19,10 +28,9 @@ class API {
         };
         let result = {};
         await request(options, (error, response, body) => {
-            console.log(body);
+            // console.log(body);
             result = { statusCode: response.statusCode, body: JSON.parse(body) };
         });
-        console.log(result);
         return result;
     }
 

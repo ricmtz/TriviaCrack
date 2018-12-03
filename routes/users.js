@@ -2,8 +2,9 @@ const { Router } = require('express');
 const { CtrlUser } = require('../controllers');
 const router = Router();
 
-router.get('/login', CtrlUser.loginPage);
-router.get('/register', CtrlUser.registerPage);
+router.post('/login', CtrlUser.login);
+router.get('/logout', CtrlUser.logout);
+// router.get('/register', CtrlUser.registerPage);
 router.get('/profile', CtrlUser.profilePage);
 router.post('/profile', function(req, res){
     res.send('Not implemented')
