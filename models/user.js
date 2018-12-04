@@ -21,8 +21,18 @@ class User {
     async logout(req) {
         const header = {
             token: req.cookies.token,
-        }
+        };
         const url = `${process.env.HOST}/logout`;
+        const response = await API.getMethod(url, header)
+            .catch((err) => { });
+        return response;
+    }
+
+    async getProfile(nickname, token) {
+        const header = {
+            token: token,
+        };
+        const url = `${process.env.HOST}/users/${nickname}`;
         const response = await API.getMethod(url, header)
             .catch((err) => { });
         return response;
