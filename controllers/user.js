@@ -27,6 +27,19 @@ class User {
         }
     }
 
+    async register(req, res) {
+        const nickname = req.body.nickname;
+        const result = await MdlUser.register(req);
+        if (result.statusCode === 200) {
+            res.cookie('token', result.body.token);
+            res.cookie('nickname', nickname);
+            res.redirect('/profile');
+        } else {
+            res.status(result.statusCode);
+            res.send(result);
+        }
+    }
+
     async profilePage(req, res) {
         const template = fs.readFileSync('public/views/profile.mst').toString();
         const menu = fs.readFileSync('public/partials/menu.mst').toString();

@@ -10,6 +10,14 @@ class User {
             .catch((err) => { });
         return response;
     }
+
+    async register(req) {
+        const url = `${process.env.HOST}/register`;
+        const response = await API.postMethod(url, req.body)
+            .catch((err) => { });
+        return response;
+    }
+
     async logout(req) {
         const header = {
             token: req.cookies.token,
@@ -17,7 +25,6 @@ class User {
         const url = `${process.env.HOST}/logout`;
         const response = await API.getMethod(url, header)
             .catch((err) => { });
-        console.log('logout', response);
         return response;
     }
 }
